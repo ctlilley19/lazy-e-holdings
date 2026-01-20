@@ -187,13 +187,15 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black-300/90 backdrop-blur-md border-b border-gray-800">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <a href="#" className="flex items-center gap-4">
-            <Image
-              src="/images/lazy-e-logo.png"
-              alt="Lazy E Holdings"
-              width={50}
-              height={50}
-              className="rounded-lg"
-            />
+            <div className="w-14 h-14 rounded-lg overflow-hidden">
+              <Image
+                src="/images/lazy-e-logo.png"
+                alt="Lazy E Holdings"
+                width={100}
+                height={100}
+                className="scale-150 translate-x-1"
+              />
+            </div>
             <span className="font-display text-xl font-semibold text-gold-shimmer">
               Lazy E Holdings
             </span>
@@ -227,18 +229,6 @@ export default function Home() {
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                 </svg>
                 <span className="text-sm text-gray-300">Veteran-Owned | Dallas-Fort Worth</span>
-              </div>
-
-              {/* Logo - BIGGER */}
-              <div className="mb-8">
-                <Image
-                  src="/images/lazy-e-logo.png"
-                  alt="Lazy E Holdings Logo"
-                  width={200}
-                  height={200}
-                  className="rounded-2xl"
-                  priority
-                />
               </div>
 
               {/* Headline */}
@@ -406,15 +396,17 @@ export default function Home() {
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-medium text-gold-primary mb-2">About</p>
 
-          {/* Logo */}
+          {/* Logo - zoomed in on the E */}
           <div className="mb-8 flex justify-center">
-            <Image
-              src="/images/lazy-e-logo.png"
-              alt="Lazy E Holdings Logo"
-              width={150}
-              height={150}
-              className="rounded-2xl"
-            />
+            <div className="w-32 h-32 rounded-2xl overflow-hidden">
+              <Image
+                src="/images/lazy-e-logo.png"
+                alt="Lazy E Holdings Logo"
+                width={180}
+                height={180}
+                className="scale-150 translate-x-1"
+              />
+            </div>
           </div>
 
           <h2 className="font-display text-3xl md:text-4xl font-bold text-gold-shimmer mb-6">
