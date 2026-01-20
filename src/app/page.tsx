@@ -243,8 +243,8 @@ export default function Home() {
               {/* Stats */}
               <div className="mt-10 flex items-center gap-10">
                 <div>
-                  <p className="font-display text-3xl font-bold text-gold-shimmer">3</p>
-                  <p className="text-sm text-gray-500">Ventures</p>
+                  <p className="font-display text-3xl font-bold text-gold-shimmer">3+</p>
+                  <p className="text-sm text-gray-500">Ventures & Growing</p>
                 </div>
                 <div className="h-12 w-px bg-gray-700" />
                 <div>
@@ -298,10 +298,10 @@ export default function Home() {
           <div className="mb-12 text-center">
             <p className="text-sm font-medium text-gold-primary mb-2">Our Portfolio</p>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-gold-shimmer">
-              Three Ventures, One Vision
+              Current Ventures
             </h2>
             <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
-              Each business addresses real problems with practical solutions—built on a foundation of quality, transparency, and results.
+              We&apos;re always building. Each venture addresses real problems with practical solutions—and this is just the beginning.
             </p>
           </div>
 
