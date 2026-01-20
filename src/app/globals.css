@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Elegant Off-White/Eggshell Theme with Deep Metallic Gold Accents */
+/* Elegant Off-White/Eggshell Theme with Smoked Gold Accents */
 :root {
   /* Off-white/Eggshell tones */
   --cream-50: #fefdfb;
@@ -16,15 +16,15 @@
   --warm-800: #2d2a27;
   --warm-900: #1a1816;
 
-  /* Deep Metallic Gold tones - rich dark brass/gold */
-  --gold-100: #f5e6b8;
-  --gold-200: #d4b96a;
-  --gold-300: #b8973d;
-  --gold-400: #a07d1c;
-  --gold-500: #8b6914;
-  --gold-600: #7a5c0f;
-  --gold-700: #654b0c;
-  --gold-800: #503b09;
+  /* Smoked Gold tones - true gold with dark/black undertones */
+  --gold-100: #e8d48a;
+  --gold-200: #d4bc5e;
+  --gold-300: #c9a227;
+  --gold-400: #a8850d;
+  --gold-500: #85690a;
+  --gold-600: #5c4a08;
+  --gold-700: #3d3005;
+  --gold-800: #1f1803;
 
   /* Background & Foreground */
   --background: var(--cream-100);
@@ -67,20 +67,22 @@ body {
   font-family: var(--font-fraunces), Georgia, serif;
 }
 
-/* Gold text */
+/* Gold text - smoked gold base */
 .text-gold {
-  color: var(--gold-500);
+  color: var(--gold-400);
 }
 
-/* Metallic gold gradient text - sleek shiny effect with deep gold */
+/* Smoked metallic gold gradient - shiny gold fading to black */
 .text-gold-gradient {
   background: linear-gradient(
     135deg,
-    var(--gold-300) 0%,
-    var(--gold-200) 20%,
-    var(--gold-500) 50%,
-    var(--gold-200) 80%,
-    var(--gold-300) 100%
+    #d4af37 0%,
+    #c9a227 15%,
+    #1a1506 40%,
+    #0d0a03 50%,
+    #1a1506 60%,
+    #c9a227 85%,
+    #d4af37 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -104,6 +106,6 @@ html {
 
 /* Selection styling */
 ::selection {
-  background: var(--gold-500);
+  background: var(--gold-400);
   color: white;
 }
