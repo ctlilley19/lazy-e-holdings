@@ -39,7 +39,7 @@ const ventures: Venture[] = [
     ],
     gradient: "from-blue-500 to-blue-600",
     icon: "M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25",
-    url: null, // Coming soon
+    url: null,
   },
   {
     id: "coreops",
@@ -56,7 +56,7 @@ const ventures: Venture[] = [
     ],
     gradient: "from-emerald-500 to-emerald-600",
     icon: "M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z",
-    url: null, // Coming soon
+    url: null,
   },
   {
     id: "k9trainpros",
@@ -73,7 +73,7 @@ const ventures: Venture[] = [
     ],
     gradient: "from-yellow-600 to-yellow-700",
     icon: "M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z",
-    url: "https://k9protrain.com", // Live site
+    url: "https://k9protrain.com",
   },
 ];
 
@@ -97,8 +97,8 @@ function VentureCard({
     <div
       onClick={onClick}
       className={`
-        relative cursor-pointer rounded-2xl border-2 transition-all duration-300 bg-cream-50
-        ${isActive ? "border-gold-600 shadow-xl" : "border-cream-300 hover:border-cream-400 hover:shadow-lg"}
+        relative cursor-pointer rounded-2xl border transition-all duration-300 bg-black-100
+        ${isActive ? "border-gold-primary shadow-2xl shadow-gold-primary/20" : "border-gray-800 hover:border-gray-700 hover:shadow-xl"}
       `}
     >
       <div className="p-6 md:p-8">
@@ -113,13 +113,13 @@ function VentureCard({
               <h3 className="font-display text-xl font-semibold text-gold-shimmer">
                 {venture.name}
               </h3>
-              <p className="text-sm text-warm-500">{venture.tagline}</p>
+              <p className="text-sm text-gray-400">{venture.tagline}</p>
             </div>
           </div>
           <span
             className={`
               rounded-full px-3 py-1 text-xs font-medium
-              ${venture.status.includes("Launching") ? "bg-gold-100 text-gold-shimmer" : "bg-cream-200 text-warm-600"}
+              ${venture.status.includes("Launching") ? "bg-gold-primary/20 text-gold-light" : "bg-gray-800 text-gray-400"}
             `}
           >
             {venture.status}
@@ -132,25 +132,24 @@ function VentureCard({
             ${isActive ? "mt-6 max-h-96 opacity-100" : "max-h-0 opacity-0"}
           `}
         >
-          <p className="text-warm-600 leading-relaxed">{venture.description}</p>
+          <p className="text-gray-300 leading-relaxed">{venture.description}</p>
 
           <div className="mt-6 flex flex-wrap gap-2">
             {venture.features.map((feature, idx) => (
               <span
                 key={idx}
-                className="rounded-full bg-cream-200 px-4 py-2 text-sm text-warm-700"
+                className="rounded-full bg-gray-800 px-4 py-2 text-sm text-gray-300"
               >
                 {feature}
               </span>
             ))}
           </div>
 
-          {/* Visit Site Button */}
           <div className="mt-6">
             {venture.url ? (
               <button
                 onClick={handleVisit}
-                className="inline-flex items-center gap-2 rounded-full bg-gold-600 px-5 py-2.5 text-sm font-medium text-white transition-all hover:bg-gold-700 hover:shadow-lg"
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-gold-dark via-gold-primary to-gold-dark px-5 py-2.5 text-sm font-medium text-black transition-all hover:shadow-lg hover:shadow-gold-primary/30"
               >
                 Visit Site
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -158,7 +157,7 @@ function VentureCard({
                 </svg>
               </button>
             ) : (
-              <span className="inline-flex items-center gap-2 text-sm text-warm-500">
+              <span className="inline-flex items-center gap-2 text-sm text-gray-500">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -169,7 +168,7 @@ function VentureCard({
         </div>
 
         {!isActive && (
-          <div className="mt-4 flex items-center gap-2 text-sm text-warm-500">
+          <div className="mt-4 flex items-center gap-2 text-sm text-gray-500">
             <span>Click to learn more</span>
             <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -185,33 +184,33 @@ export default function Home() {
   const [activeVenture, setActiveVenture] = useState<string | null>("axis");
 
   return (
-    <div className="min-h-screen bg-cream-100">
+    <div className="min-h-screen bg-black-300">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-cream-100/80 backdrop-blur-md border-b border-cream-300">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-black-300/90 backdrop-blur-md border-b border-gray-800">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <a href="#" className="flex items-center gap-3">
+          <a href="#" className="flex items-center gap-4">
             <Image
               src="/images/lazy-e-logo.png"
               alt="Lazy E Holdings"
-              width={40}
-              height={40}
+              width={50}
+              height={50}
               className="rounded-lg"
             />
-            <span className="font-display text-lg font-semibold text-gold-shimmer">
+            <span className="font-display text-xl font-semibold text-gold-shimmer">
               Lazy E Holdings
             </span>
           </a>
 
           <div className="hidden items-center gap-8 md:flex">
-            <a href="#ventures" className="text-sm text-warm-600 transition-colors hover:text-gold-shimmer">
+            <a href="#ventures" className="text-sm text-gray-400 transition-colors hover:text-gold-primary">
               Ventures
             </a>
-            <a href="#about" className="text-sm text-warm-600 transition-colors hover:text-gold-shimmer">
+            <a href="#about" className="text-sm text-gray-400 transition-colors hover:text-gold-primary">
               About
             </a>
             <a
               href="#contact"
-              className="rounded-full bg-gold-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-gold-700"
+              className="rounded-full bg-gradient-to-r from-gold-dark via-gold-primary to-gold-dark px-5 py-2.5 text-sm font-medium text-black transition-all hover:shadow-lg hover:shadow-gold-primary/30"
             >
               Contact
             </a>
@@ -225,11 +224,23 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               {/* Badge */}
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-cream-200 px-4 py-2">
-                <svg className="h-4 w-4 text-gold-shimmer" fill="currentColor" viewBox="0 0 20 20">
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-gray-800 px-4 py-2 border border-gray-700">
+                <svg className="h-4 w-4 text-gold-primary" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                 </svg>
-                <span className="text-sm text-warm-700">Veteran-Owned | Dallas-Fort Worth</span>
+                <span className="text-sm text-gray-300">Veteran-Owned | Dallas-Fort Worth</span>
+              </div>
+
+              {/* Logo - BIGGER */}
+              <div className="mb-8">
+                <Image
+                  src="/images/lazy-e-logo.png"
+                  alt="Lazy E Holdings Logo"
+                  width={200}
+                  height={200}
+                  className="rounded-2xl"
+                  priority
+                />
               </div>
 
               {/* Headline */}
@@ -239,7 +250,7 @@ export default function Home() {
                 <span className="text-gold-gradient">That Matter</span>
               </h1>
 
-              <p className="mt-6 text-lg text-warm-600 leading-relaxed max-w-lg">
+              <p className="mt-6 text-lg text-gray-400 leading-relaxed max-w-lg">
                 A Texas-based holding company developing innovative ventures in facilities management, property services, and technology.
               </p>
 
@@ -247,30 +258,30 @@ export default function Home() {
               <div className="mt-10 flex items-center gap-10">
                 <div>
                   <p className="font-display text-3xl font-bold text-gold-shimmer">3</p>
-                  <p className="text-sm text-warm-500">Ventures</p>
+                  <p className="text-sm text-gray-500">Ventures</p>
                 </div>
-                <div className="h-12 w-px bg-cream-300" />
+                <div className="h-12 w-px bg-gray-700" />
                 <div>
                   <p className="font-display text-3xl font-bold text-gold-shimmer">DFW</p>
-                  <p className="text-sm text-warm-500">Based</p>
+                  <p className="text-sm text-gray-500">Based</p>
                 </div>
-                <div className="h-12 w-px bg-cream-300" />
+                <div className="h-12 w-px bg-gray-700" />
                 <div>
                   <p className="font-display text-3xl font-bold text-gold-shimmer">2026</p>
-                  <p className="text-sm text-warm-500">Founded</p>
+                  <p className="text-sm text-gray-500">Founded</p>
                 </div>
               </div>
 
               <div className="mt-10 flex items-center gap-4">
                 <a
                   href="#ventures"
-                  className="rounded-full bg-gold-600 px-6 py-3 text-sm font-medium text-white transition-all hover:bg-gold-700 hover:shadow-lg"
+                  className="rounded-full bg-gradient-to-r from-gold-dark via-gold-primary to-gold-dark px-6 py-3 text-sm font-medium text-black transition-all hover:shadow-lg hover:shadow-gold-primary/30"
                 >
                   Explore Ventures
                 </a>
                 <a
                   href="#contact"
-                  className="rounded-full border-2 border-cream-400 px-6 py-3 text-sm font-medium text-warm-700 transition-all hover:border-gold-500 hover:bg-cream-50"
+                  className="rounded-full border border-gray-700 px-6 py-3 text-sm font-medium text-gray-300 transition-all hover:border-gold-primary hover:text-gold-primary"
                 >
                   Get in Touch
                 </a>
@@ -279,8 +290,8 @@ export default function Home() {
 
             {/* Hero Image */}
             <div className="relative hidden lg:block">
-              <div className="absolute -inset-4 bg-gradient-to-br from-gold-100 to-cream-200 rounded-3xl" />
-              <div className="relative aspect-square rounded-2xl overflow-hidden">
+              <div className="absolute -inset-4 bg-gradient-to-br from-gold-primary/20 to-transparent rounded-3xl blur-2xl" />
+              <div className="relative aspect-square rounded-2xl overflow-hidden border border-gray-800">
                 <Image
                   src={images.hero}
                   alt="Dallas Fort Worth skyline"
@@ -296,14 +307,14 @@ export default function Home() {
       </section>
 
       {/* Ventures Section */}
-      <section id="ventures" className="scroll-mt-20 px-6 py-24 bg-cream-200">
+      <section id="ventures" className="scroll-mt-20 px-6 py-24 bg-black-200">
         <div className="mx-auto max-w-4xl">
           <div className="mb-12 text-center">
-            <p className="text-sm font-medium text-gold-shimmer mb-2">Our Portfolio</p>
+            <p className="text-sm font-medium text-gold-primary mb-2">Our Portfolio</p>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-gold-shimmer">
               Three Ventures, One Vision
             </h2>
-            <p className="mt-4 text-warm-600 max-w-2xl mx-auto">
+            <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
               Each business addresses real problems with practical solutions—built on a foundation of quality, transparency, and results.
             </p>
           </div>
@@ -322,10 +333,10 @@ export default function Home() {
       </section>
 
       {/* Values Section with Images */}
-      <section className="px-6 py-24 bg-cream-100">
+      <section className="px-6 py-24 bg-black-300">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <p className="text-sm font-medium text-gold-shimmer mb-2">How We Work</p>
+            <p className="text-sm font-medium text-gold-primary mb-2">How We Work</p>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-gold-shimmer">
               Built on Principles
             </h2>
@@ -333,7 +344,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="group">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-6 border border-cream-300">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-6 border border-gray-800">
                 <Image
                   src={images.strategy}
                   alt="Strategic planning"
@@ -346,13 +357,13 @@ export default function Home() {
               <h3 className="font-display text-xl font-semibold text-gold-shimmer mb-2">
                 Strategic Focus
               </h3>
-              <p className="text-warm-600">
+              <p className="text-gray-400">
                 Every decision is intentional. We identify real problems and build practical solutions that deliver measurable results.
               </p>
             </div>
 
             <div className="group">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-6 border border-cream-300">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-6 border border-gray-800">
                 <Image
                   src={images.technology}
                   alt="Technology development"
@@ -365,13 +376,13 @@ export default function Home() {
               <h3 className="font-display text-xl font-semibold text-gold-shimmer mb-2">
                 Modern Technology
               </h3>
-              <p className="text-warm-600">
+              <p className="text-gray-400">
                 We leverage current tools and platforms to build efficient, scalable solutions without unnecessary complexity.
               </p>
             </div>
 
             <div className="group">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-6 border border-cream-300">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-6 border border-gray-800">
                 <Image
                   src={images.collaboration}
                   alt="Team collaboration"
@@ -384,7 +395,7 @@ export default function Home() {
               <h3 className="font-display text-xl font-semibold text-gold-shimmer mb-2">
                 Quality Commitment
               </h3>
-              <p className="text-warm-600">
+              <p className="text-gray-400">
                 We build things that last. Every product and service reflects our commitment to excellence and attention to detail.
               </p>
             </div>
@@ -393,32 +404,32 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="scroll-mt-20 px-6 py-24 bg-cream-200">
+      <section id="about" className="scroll-mt-20 px-6 py-24 bg-black-200">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-medium text-gold-shimmer mb-2">About</p>
+          <p className="text-sm font-medium text-gold-primary mb-2">About</p>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-gold-shimmer mb-6">
             Lazy E Holdings
           </h2>
-          <p className="text-lg text-warm-600 leading-relaxed">
+          <p className="text-lg text-gray-400 leading-relaxed">
             Veteran-founded and based in Dallas-Fort Worth, we build technology and services that solve real problems—with discipline, precision, and a commitment to quality.
           </p>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="scroll-mt-20 px-6 py-24 bg-cream-100">
+      <section id="contact" className="scroll-mt-20 px-6 py-24 bg-black-300">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-medium text-gold-shimmer mb-2">Get in Touch</p>
+          <p className="text-sm font-medium text-gold-primary mb-2">Get in Touch</p>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-gold-shimmer mb-4">
             Let&apos;s Connect
           </h2>
-          <p className="text-warm-600 mb-8">
+          <p className="text-gray-400 mb-8">
             Interested in learning more about our ventures or exploring partnership opportunities?
           </p>
 
           <a
             href="mailto:admin@lazyeholdings.com"
-            className="inline-flex items-center gap-3 rounded-full bg-gold-600 px-8 py-4 font-medium text-white transition-all hover:bg-gold-700 hover:shadow-xl"
+            className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-gold-dark via-gold-primary to-gold-dark px-8 py-4 font-medium text-black transition-all hover:shadow-xl hover:shadow-gold-primary/30"
           >
             <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -426,35 +437,35 @@ export default function Home() {
             admin@lazyeholdings.com
           </a>
 
-          <p className="mt-6 text-sm text-warm-500">Dallas-Fort Worth, Texas</p>
+          <p className="mt-6 text-sm text-gray-500">Dallas-Fort Worth, Texas</p>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-cream-300 bg-cream-100 px-6 py-8">
+      <footer className="border-t border-gray-800 bg-black-300 px-6 py-8">
         <div className="mx-auto max-w-6xl">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <div className="flex items-center gap-3">
               <Image
                 src="/images/lazy-e-logo.png"
                 alt="Lazy E Holdings"
-                width={32}
-                height={32}
+                width={40}
+                height={40}
                 className="rounded-lg"
               />
-              <span className="text-sm text-warm-500">
+              <span className="text-sm text-gray-500">
                 © {new Date().getFullYear()} Lazy E Holdings LLC
               </span>
             </div>
 
             <div className="flex items-center gap-6">
-              <a href="#ventures" className="text-sm text-warm-500 transition-colors hover:text-gold-shimmer">
+              <a href="#ventures" className="text-sm text-gray-500 transition-colors hover:text-gold-primary">
                 Ventures
               </a>
-              <a href="#about" className="text-sm text-warm-500 transition-colors hover:text-gold-shimmer">
+              <a href="#about" className="text-sm text-gray-500 transition-colors hover:text-gold-primary">
                 About
               </a>
-              <a href="#contact" className="text-sm text-warm-500 transition-colors hover:text-gold-shimmer">
+              <a href="#contact" className="text-sm text-gray-500 transition-colors hover:text-gold-primary">
                 Contact
               </a>
             </div>
