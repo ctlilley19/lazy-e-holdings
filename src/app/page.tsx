@@ -187,15 +187,13 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black-300/90 backdrop-blur-md border-b border-gray-800">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <a href="#" className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-lg overflow-hidden">
-              <Image
-                src="/images/lazy-e-logo.png"
-                alt="Lazy E Holdings"
-                width={100}
-                height={100}
-                className="scale-150 translate-x-1"
-              />
-            </div>
+            <Image
+              src="/images/lazy-e-logo-zoomed.jpg"
+              alt="Lazy E Holdings"
+              width={56}
+              height={56}
+              className="rounded-lg"
+            />
             <span className="font-display text-xl font-semibold text-gold-shimmer">
               Lazy E Holdings
             </span>
@@ -405,15 +403,13 @@ export default function Home() {
             {/* Founder Info */}
             <div>
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-20 h-20 rounded-2xl overflow-hidden">
-                  <Image
-                    src="/images/lazy-e-logo.png"
-                    alt="Lazy E Holdings Logo"
-                    width={120}
-                    height={120}
-                    className="scale-150 translate-x-1"
-                  />
-                </div>
+                <Image
+                  src="/images/lazy-e-logo-zoomed.jpg"
+                  alt="Lazy E Holdings Logo"
+                  width={80}
+                  height={80}
+                  className="rounded-2xl"
+                />
                 <div>
                   <h3 className="font-display text-xl font-semibold text-gold-shimmer">Clayton Lilley</h3>
                   <p className="text-gray-400">Founder & CEO</p>
