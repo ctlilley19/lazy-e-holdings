@@ -3,12 +3,12 @@
 import Image from "next/image";
 import { useState } from "react";
 
-// Professional images for the site
+// Business/Innovation images from Unsplash (free for commercial use)
 const images = {
-  hero: "https://media.nbcdfw.com/2023/10/562034.jpeg?fit=2048%2C1365&quality=85&strip=all", // Dallas skyline night
-  strategy: "https://cdn.dribbble.com/userupload/15813489/file/original-9784c3910b8ae034233dc1730426afbd.jpeg?resize=400x0", // Dark facilities
-  technology: "https://www.camcode.com/wp-content/uploads/2018/06/shutterstock_2399344103-1135x675.webp", // Warehouse operations
-  collaboration: "https://www.winthrop.edu/_resources/ldp-images/.private_ldp/a192933/production/master/a810f781-b279-44e7-acc9-593d95483e11.jpg", // Leadership meeting
+  hero: "https://images.unsplash.com/photo-1545194445-dddb8f4487c6?w=1200&q=80", // Dallas skyline
+  strategy: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+  technology: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80",
+  collaboration: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
 };
 
 type Venture = {
