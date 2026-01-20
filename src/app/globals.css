@@ -67,9 +67,18 @@ body {
   font-family: var(--font-fraunces), Georgia, serif;
 }
 
-/* Gold text - smoked gold base */
+/* Smoked gold text - shimmer with black shadow tone */
 .text-gold {
-  color: var(--gold-400);
+  background: linear-gradient(
+    180deg,
+    #d4af37 0%,
+    #b8973d 30%,
+    #3d3005 70%,
+    #1a1506 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Smoked metallic gold gradient - shiny gold fading to black */
@@ -83,6 +92,21 @@ body {
     #1a1506 60%,
     #c9a227 85%,
     #d4af37 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Smoked gold for headings - vertical shimmer */
+.text-gold-shimmer {
+  background: linear-gradient(
+    180deg,
+    #e8d48a 0%,
+    #d4af37 20%,
+    #8b6914 50%,
+    #3d3005 80%,
+    #1f1803 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

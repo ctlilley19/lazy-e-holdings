@@ -110,7 +110,7 @@ function VentureCard({
               </svg>
             </div>
             <div>
-              <h3 className="font-display text-xl font-semibold text-gold-700">
+              <h3 className="font-display text-xl font-semibold text-gold-shimmer">
                 {venture.name}
               </h3>
               <p className="text-sm text-warm-500">{venture.tagline}</p>
@@ -119,7 +119,7 @@ function VentureCard({
           <span
             className={`
               rounded-full px-3 py-1 text-xs font-medium
-              ${venture.status.includes("Launching") ? "bg-gold-100 text-gold-700" : "bg-cream-200 text-warm-600"}
+              ${venture.status.includes("Launching") ? "bg-gold-100 text-gold-shimmer" : "bg-cream-200 text-warm-600"}
             `}
           >
             {venture.status}
@@ -197,16 +197,16 @@ export default function Home() {
               height={40}
               className="rounded-lg"
             />
-            <span className="font-display text-lg font-semibold text-gold-700">
+            <span className="font-display text-lg font-semibold text-gold-shimmer">
               Lazy E Holdings
             </span>
           </a>
 
           <div className="hidden items-center gap-8 md:flex">
-            <a href="#ventures" className="text-sm text-warm-600 transition-colors hover:text-gold-600">
+            <a href="#ventures" className="text-sm text-warm-600 transition-colors hover:text-gold-shimmer">
               Ventures
             </a>
-            <a href="#about" className="text-sm text-warm-600 transition-colors hover:text-gold-600">
+            <a href="#about" className="text-sm text-warm-600 transition-colors hover:text-gold-shimmer">
               About
             </a>
             <a
@@ -226,14 +226,14 @@ export default function Home() {
             <div>
               {/* Badge */}
               <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-cream-200 px-4 py-2">
-                <svg className="h-4 w-4 text-gold-600" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="h-4 w-4 text-gold-shimmer" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                 </svg>
                 <span className="text-sm text-warm-700">Veteran-Owned | Dallas-Fort Worth</span>
               </div>
 
               {/* Headline */}
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gold-700">
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gold-shimmer">
                 Building Solutions
                 <br />
                 <span className="text-gold-gradient">That Matter</span>
@@ -246,17 +246,17 @@ export default function Home() {
               {/* Stats */}
               <div className="mt-10 flex items-center gap-10">
                 <div>
-                  <p className="font-display text-3xl font-bold text-gold-600">3</p>
+                  <p className="font-display text-3xl font-bold text-gold-shimmer">3</p>
                   <p className="text-sm text-warm-500">Ventures</p>
                 </div>
                 <div className="h-12 w-px bg-cream-300" />
                 <div>
-                  <p className="font-display text-3xl font-bold text-gold-600">DFW</p>
+                  <p className="font-display text-3xl font-bold text-gold-shimmer">DFW</p>
                   <p className="text-sm text-warm-500">Based</p>
                 </div>
                 <div className="h-12 w-px bg-cream-300" />
                 <div>
-                  <p className="font-display text-3xl font-bold text-gold-600">2024</p>
+                  <p className="font-display text-3xl font-bold text-gold-shimmer">2026</p>
                   <p className="text-sm text-warm-500">Founded</p>
                 </div>
               </div>
@@ -299,8 +299,8 @@ export default function Home() {
       <section id="ventures" className="scroll-mt-20 px-6 py-24 bg-cream-200">
         <div className="mx-auto max-w-4xl">
           <div className="mb-12 text-center">
-            <p className="text-sm font-medium text-gold-600 mb-2">Our Portfolio</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-gold-700">
+            <p className="text-sm font-medium text-gold-shimmer mb-2">Our Portfolio</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-gold-shimmer">
               Three Ventures, One Vision
             </h2>
             <p className="mt-4 text-warm-600 max-w-2xl mx-auto">
@@ -325,8 +325,8 @@ export default function Home() {
       <section className="px-6 py-24 bg-cream-100">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <p className="text-sm font-medium text-gold-600 mb-2">How We Work</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-gold-700">
+            <p className="text-sm font-medium text-gold-shimmer mb-2">How We Work</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-gold-shimmer">
               Built on Principles
             </h2>
           </div>
@@ -343,7 +343,7 @@ export default function Home() {
                   unoptimized
                 />
               </div>
-              <h3 className="font-display text-xl font-semibold text-gold-700 mb-2">
+              <h3 className="font-display text-xl font-semibold text-gold-shimmer mb-2">
                 Strategic Focus
               </h3>
               <p className="text-warm-600">
@@ -362,7 +362,7 @@ export default function Home() {
                   unoptimized
                 />
               </div>
-              <h3 className="font-display text-xl font-semibold text-gold-700 mb-2">
+              <h3 className="font-display text-xl font-semibold text-gold-shimmer mb-2">
                 Modern Technology
               </h3>
               <p className="text-warm-600">
@@ -381,7 +381,7 @@ export default function Home() {
                   unoptimized
                 />
               </div>
-              <h3 className="font-display text-xl font-semibold text-gold-700 mb-2">
+              <h3 className="font-display text-xl font-semibold text-gold-shimmer mb-2">
                 Quality Commitment
               </h3>
               <p className="text-warm-600">
@@ -395,8 +395,8 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="scroll-mt-20 px-6 py-24 bg-cream-200">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-medium text-gold-600 mb-2">About</p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-gold-700 mb-6">
+          <p className="text-sm font-medium text-gold-shimmer mb-2">About</p>
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-gold-shimmer mb-6">
             Lazy E Holdings
           </h2>
           <p className="text-lg text-warm-600 leading-relaxed">
@@ -408,8 +408,8 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="scroll-mt-20 px-6 py-24 bg-cream-100">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-medium text-gold-600 mb-2">Get in Touch</p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-gold-700 mb-4">
+          <p className="text-sm font-medium text-gold-shimmer mb-2">Get in Touch</p>
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-gold-shimmer mb-4">
             Let&apos;s Connect
           </h2>
           <p className="text-warm-600 mb-8">
@@ -448,13 +448,13 @@ export default function Home() {
             </div>
 
             <div className="flex items-center gap-6">
-              <a href="#ventures" className="text-sm text-warm-500 transition-colors hover:text-gold-600">
+              <a href="#ventures" className="text-sm text-warm-500 transition-colors hover:text-gold-shimmer">
                 Ventures
               </a>
-              <a href="#about" className="text-sm text-warm-500 transition-colors hover:text-gold-600">
+              <a href="#about" className="text-sm text-warm-500 transition-colors hover:text-gold-shimmer">
                 About
               </a>
-              <a href="#contact" className="text-sm text-warm-500 transition-colors hover:text-gold-600">
+              <a href="#contact" className="text-sm text-warm-500 transition-colors hover:text-gold-shimmer">
                 Contact
               </a>
             </div>
