@@ -5,7 +5,7 @@ import { useState } from "react";
 
 // Business/Innovation images from Unsplash (free for commercial use)
 const images = {
-  hero: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80",
+  hero: "https://images.unsplash.com/photo-1545194445-dddb8f4487c6?w=1200&q=80", // Dallas skyline
   strategy: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
   technology: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80",
   collaboration: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
@@ -283,7 +283,7 @@ export default function Home() {
               <div className="relative aspect-square rounded-2xl overflow-hidden">
                 <Image
                   src={images.hero}
-                  alt="Modern office workspace"
+                  alt="Dallas Fort Worth skyline"
                   fill
                   className="object-cover"
                   priority
