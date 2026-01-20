@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Elegant Off-White/Eggshell Theme with Gold Accents */
+/* Elegant Off-White/Eggshell Theme with Deep Metallic Gold Accents */
 :root {
   /* Off-white/Eggshell tones */
   --cream-50: #fefdfb;
@@ -16,12 +16,15 @@
   --warm-800: #2d2a27;
   --warm-900: #1a1816;
 
-  /* Gold tones */
-  --gold-300: #fcd34d;
-  --gold-400: #fbbf24;
-  --gold-500: #f59e0b;
-  --gold-600: #d97706;
-  --gold-700: #b45309;
+  /* Deep Metallic Gold tones - rich dark brass/gold */
+  --gold-100: #f5e6b8;
+  --gold-200: #d4b96a;
+  --gold-300: #b8973d;
+  --gold-400: #a07d1c;
+  --gold-500: #8b6914;
+  --gold-600: #7a5c0f;
+  --gold-700: #654b0c;
+  --gold-800: #503b09;
 
   /* Background & Foreground */
   --background: var(--cream-100);
@@ -41,11 +44,14 @@
   --color-warm-700: var(--warm-700);
   --color-warm-800: var(--warm-800);
   --color-warm-900: var(--warm-900);
+  --color-gold-100: var(--gold-100);
+  --color-gold-200: var(--gold-200);
   --color-gold-300: var(--gold-300);
   --color-gold-400: var(--gold-400);
   --color-gold-500: var(--gold-500);
   --color-gold-600: var(--gold-600);
   --color-gold-700: var(--gold-700);
+  --color-gold-800: var(--gold-800);
   --font-sans: var(--font-dm-sans);
   --font-display: var(--font-fraunces);
 }
@@ -63,12 +69,19 @@ body {
 
 /* Gold text */
 .text-gold {
-  color: var(--gold-600);
+  color: var(--gold-500);
 }
 
-/* Gold gradient text */
+/* Metallic gold gradient text - sleek shiny effect with deep gold */
 .text-gold-gradient {
-  background: linear-gradient(135deg, var(--gold-500) 0%, var(--gold-600) 50%, var(--gold-700) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--gold-300) 0%,
+    var(--gold-200) 20%,
+    var(--gold-500) 50%,
+    var(--gold-200) 80%,
+    var(--gold-300) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
