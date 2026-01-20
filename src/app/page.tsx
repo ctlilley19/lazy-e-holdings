@@ -233,13 +233,13 @@ export default function Home() {
 
               {/* Headline */}
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gold-shimmer">
-                Building Solutions
+                Building Tools
                 <br />
-                <span className="text-gold-gradient">That Matter</span>
+                <span className="text-gold-gradient">That Make Life Easier</span>
               </h1>
 
               <p className="mt-6 text-lg text-gray-400 leading-relaxed max-w-lg">
-                A Texas-based holding company developing innovative ventures in facilities management, property services, and technology.
+                We build software and services that simplify the complicated—so people can focus on what actually matters.
               </p>
 
               {/* Stats */}
@@ -393,28 +393,67 @@ export default function Home() {
 
       {/* About Section */}
       <section id="about" className="scroll-mt-20 px-6 py-24 bg-black-200">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-medium text-gold-primary mb-2">About</p>
-
-          {/* Logo - zoomed in on the E */}
-          <div className="mb-8 flex justify-center">
-            <div className="w-32 h-32 rounded-2xl overflow-hidden">
-              <Image
-                src="/images/lazy-e-logo.png"
-                alt="Lazy E Holdings Logo"
-                width={180}
-                height={180}
-                className="scale-150 translate-x-1"
-              />
-            </div>
+        <div className="mx-auto max-w-5xl">
+          <div className="text-center mb-12">
+            <p className="text-sm font-medium text-gold-primary mb-2">About</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-gold-shimmer">
+              The Story Behind Lazy E
+            </h2>
           </div>
 
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-gold-shimmer mb-6">
-            Lazy E Holdings
-          </h2>
-          <p className="text-lg text-gray-400 leading-relaxed">
-            Veteran-founded and based in Dallas-Fort Worth, we build technology and services that solve real problems—with discipline, precision, and a commitment to quality.
-          </p>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Founder Info */}
+            <div>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-20 h-20 rounded-2xl overflow-hidden">
+                  <Image
+                    src="/images/lazy-e-logo.png"
+                    alt="Lazy E Holdings Logo"
+                    width={120}
+                    height={120}
+                    className="scale-150 translate-x-1"
+                  />
+                </div>
+                <div>
+                  <h3 className="font-display text-xl font-semibold text-gold-shimmer">Clayton Lilley</h3>
+                  <p className="text-gray-400">Founder & CEO</p>
+                </div>
+              </div>
+
+              <div className="space-y-4 text-gray-400 leading-relaxed">
+                <p>
+                  After 7 years as a Combat Engineer in the United States Marine Corps—including roles as a Facilities Manager at Marine Barracks Washington and an instructor at The Basic School where I trained over 200 Marine Officers—I saw firsthand how broken systems and inefficient processes waste people&apos;s time and energy.
+                </p>
+                <p>
+                  I founded Lazy E Holdings with a simple belief: <span className="text-gray-200">technology should make life easier, not harder.</span> Every venture we build is designed to take something complicated and make it simple.
+                </p>
+              </div>
+            </div>
+
+            {/* Mission & Values */}
+            <div className="space-y-6">
+              <div className="p-6 rounded-2xl border border-gray-800 bg-black-300">
+                <h4 className="font-display text-lg font-semibold text-gold-shimmer mb-3">Our Mission</h4>
+                <p className="text-gray-400">
+                  Build tools and services that eliminate friction—helping people spend less time on operations and more time on what matters to them.
+                </p>
+              </div>
+
+              <div className="p-6 rounded-2xl border border-gray-800 bg-black-300">
+                <h4 className="font-display text-lg font-semibold text-gold-shimmer mb-3">Why &quot;Lazy E&quot;?</h4>
+                <p className="text-gray-400">
+                  The best systems require the least effort to use. We engineer simplicity—building solutions that work hard so you don&apos;t have to.
+                </p>
+              </div>
+
+              <div className="p-6 rounded-2xl border border-gray-800 bg-black-300">
+                <h4 className="font-display text-lg font-semibold text-gold-shimmer mb-3">The Approach</h4>
+                <p className="text-gray-400">
+                  Military discipline meets practical problem-solving. We identify real problems, build focused solutions, and iterate based on what actually works—not what sounds good in a pitch deck.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
