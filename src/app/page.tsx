@@ -18,8 +18,7 @@ type Venture = {
   description: string;
   status: string;
   features: string[];
-  gradient: string;
-  icon: string;
+  logo: string;
   url: string | null;
 };
 
@@ -37,8 +36,7 @@ const ventures: Venture[] = [
       "Real-time operations",
       "Configurable workflows",
     ],
-    gradient: "from-blue-500 to-blue-600",
-    icon: "M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25",
+    logo: "/images/axis-logo.png",
     url: null,
   },
   {
@@ -54,8 +52,7 @@ const ventures: Venture[] = [
       "Preventive maintenance",
       "DFW focused",
     ],
-    gradient: "from-emerald-500 to-emerald-600",
-    icon: "M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z",
+    logo: "/images/coreops-logo.png",
     url: null,
   },
   {
@@ -71,8 +68,7 @@ const ventures: Venture[] = [
       "NFC tag profiles",
       "Progress tracking",
     ],
-    gradient: "from-yellow-600 to-yellow-700",
-    icon: "M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z",
+    logo: "/images/k9trainpros-logo.png",
     url: "https://k9protrain.com",
   },
 ];
@@ -104,11 +100,13 @@ function VentureCard({
       <div className="p-6 md:p-8">
         <div className="flex items-start justify-between">
           <div className="flex items-center gap-4">
-            <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${venture.gradient} flex items-center justify-center`}>
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={venture.icon} />
-              </svg>
-            </div>
+            <Image
+              src={venture.logo}
+              alt={`${venture.name} logo`}
+              width={60}
+              height={60}
+              className="rounded-xl"
+            />
             <div>
               <h3 className="font-display text-xl font-semibold text-gold-shimmer">
                 {venture.name}
@@ -407,6 +405,18 @@ export default function Home() {
       <section id="about" className="scroll-mt-20 px-6 py-24 bg-black-200">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-medium text-gold-primary mb-2">About</p>
+
+          {/* Logo */}
+          <div className="mb-8 flex justify-center">
+            <Image
+              src="/images/lazy-e-logo.png"
+              alt="Lazy E Holdings Logo"
+              width={150}
+              height={150}
+              className="rounded-2xl"
+            />
+          </div>
+
           <h2 className="font-display text-3xl md:text-4xl font-bold text-gold-shimmer mb-6">
             Lazy E Holdings
           </h2>
