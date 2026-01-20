@@ -8,7 +8,7 @@ const images = {
   hero: "https://images.unsplash.com/photo-1545194445-dddb8f4487c6?w=1200&q=80", // Dallas skyline
   strategy: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80", // Strategy planning
   technology: "https://www.camcode.com/wp-content/uploads/2018/06/shutterstock_2399344103-1135x675.webp", // Warehouse operations
-  collaboration: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80", // Precision detail work
+  collaboration: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80", // Metal craftsman welding
 };
 
 type Venture = {
