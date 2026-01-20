@@ -3,12 +3,12 @@
 import Image from "next/image";
 import { useState } from "react";
 
-// Business/Innovation images from Unsplash (free for commercial use)
+// Professional images for the site
 const images = {
-  hero: "https://images.unsplash.com/photo-1545194445-dddb8f4487c6?w=1200&q=80", // Dallas skyline
-  strategy: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
-  technology: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80",
-  collaboration: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
+  hero: "https://media.nbcdfw.com/2023/10/562034.jpeg?fit=2048%2C1365&quality=85&strip=all", // Dallas skyline night
+  strategy: "https://cdn.dribbble.com/userupload/15813489/file/original-9784c3910b8ae034233dc1730426afbd.jpeg?resize=400x0", // Dark facilities
+  technology: "https://www.camcode.com/wp-content/uploads/2018/06/shutterstock_2399344103-1135x675.webp", // Warehouse operations
+  collaboration: "https://www.winthrop.edu/_resources/ldp-images/.private_ldp/a192933/production/master/a810f781-b279-44e7-acc9-593d95483e11.jpg", // Leadership meeting
 };
 
 type Venture = {
@@ -28,13 +28,13 @@ const ventures: Venture[] = [
     name: "Axis",
     tagline: "Where Operations Align",
     description:
-      "Multi-tenant SaaS facilities management platform that works across all property types through configuration—not separate codebases. One platform, total visibility.",
+      "A multi-tenant facilities and operations management platform designed to work across all property types through configuration—not separate codebases. One platform. Total visibility.",
     status: "In Development",
     features: [
-      "Multi-tenant architecture",
       "Property-type agnostic",
-      "Real-time operations",
       "Configurable workflows",
+      "Real-time insight",
+      "Built for scale",
     ],
     logo: "/images/axis-logo.png",
     url: null,
@@ -44,12 +44,12 @@ const ventures: Venture[] = [
     name: "CoreOps",
     tagline: "Facilities Coordination Services",
     description:
-      "Hands-on facilities management services for property owners. We handle the coordination so you can focus on what matters. Targeting Dallas-Fort Worth affluent suburbs.",
+      "Hands-on facilities coordination for property owners who don't want to manage vendors, schedules, and follow-ups themselves. We handle the coordination—so you don't have to.",
     status: "In Development",
     features: [
-      "Property coordination",
       "Vendor management",
       "Preventive maintenance",
+      "Operational oversight",
       "DFW focused",
     ],
     logo: "/images/coreops-logo.png",
@@ -60,13 +60,13 @@ const ventures: Venture[] = [
     name: "K9TrainPros",
     tagline: "Connect. Train. Thrive.",
     description:
-      "Dog training marketplace and dog care management app. Connects dog owners with professional trainers, featuring NFC tag integration for instant access to dog profiles.",
-    status: "Launching April 2026",
+      "A dog-training marketplace and lifetime dog-care management platform connecting owners with professional trainers. Built to support engagement during training—and long after pickup.",
+    status: "Launching 2026",
     features: [
       "Trainer marketplace",
-      "Dog care management",
-      "NFC tag profiles",
       "Progress tracking",
+      "NFC-enabled profiles",
+      "Lifetime records",
     ],
     logo: "/images/k9trainpros-logo.png",
     url: "https://k9protrain.com",
@@ -226,18 +226,10 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-28 md:pt-32 pb-16 md:pb-20 px-4 md:px-6">
+      <section className="relative pt-28 md:pt-32 pb-12 md:pb-16 px-4 md:px-6">
         <div className="mx-auto max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="text-center lg:text-left">
-              {/* Badge */}
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-gray-800 px-3 md:px-4 py-2 border border-gray-700">
-                <svg className="h-4 w-4 text-gold-primary" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
-                </svg>
-                <span className="text-xs md:text-sm text-gray-300">Veteran-Owned | Dallas-Fort Worth</span>
-              </div>
-
               {/* Headline */}
               <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-gold-shimmer">
                 Building Tools
@@ -246,33 +238,19 @@ export default function Home() {
               </h1>
 
               <p className="mt-4 md:mt-6 text-base md:text-lg text-gray-400 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                We build software and services that simplify the complicated—so people can focus on what actually matters.
+                We build practical software and services that remove friction from operations—so people can focus on what actually matters.
               </p>
 
-              {/* Stats */}
-              <div className="mt-8 md:mt-10 flex items-center justify-center lg:justify-start gap-4 md:gap-10">
-                <div className="text-center lg:text-left">
-                  <p className="font-display text-xl md:text-3xl font-bold text-gold-shimmer">3+</p>
-                  <p className="text-xs md:text-sm text-gray-500">Ventures</p>
-                </div>
-                <div className="h-8 md:h-12 w-px bg-gray-700" />
-                <div className="text-center lg:text-left">
-                  <p className="font-display text-xl md:text-3xl font-bold text-gold-shimmer">DFW</p>
-                  <p className="text-xs md:text-sm text-gray-500">Based</p>
-                </div>
-                <div className="h-8 md:h-12 w-px bg-gray-700" />
-                <div className="text-center lg:text-left">
-                  <p className="font-display text-xl md:text-3xl font-bold text-gold-shimmer">2026</p>
-                  <p className="text-xs md:text-sm text-gray-500">Founded</p>
-                </div>
-              </div>
+              <p className="mt-4 text-sm md:text-base text-gray-300 font-medium">
+                Veteran-owned. Operator-led. Built to scale.
+              </p>
 
               <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 md:gap-4">
                 <a
                   href="#ventures"
                   className="w-full sm:w-auto text-center rounded-full bg-gradient-to-r from-gold-dark via-gold-primary to-gold-dark px-6 py-3 text-sm font-medium text-black transition-all hover:shadow-lg hover:shadow-gold-primary/30"
                 >
-                  Explore Ventures
+                  Explore Our Ventures
                 </a>
                 <a
                   href="#contact"
@@ -301,16 +279,71 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Trust Signal Strip */}
+      <section className="px-4 md:px-6 py-8 md:py-12 bg-black-200 border-y border-gray-800">
+        <div className="mx-auto max-w-4xl">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-center">
+            <div className="flex items-center gap-2">
+              <svg className="h-5 w-5 text-gold-primary" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
+              </svg>
+              <span className="text-sm text-gray-300">Veteran-Owned</span>
+            </div>
+            <div className="hidden md:block h-4 w-px bg-gray-700" />
+            <div className="flex items-center gap-2">
+              <svg className="h-5 w-5 text-gold-primary" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+              </svg>
+              <span className="text-sm text-gray-300">Dallas–Fort Worth Based</span>
+            </div>
+            <div className="hidden md:block h-4 w-px bg-gray-700" />
+            <div className="flex items-center gap-2">
+              <svg className="h-5 w-5 text-gold-primary" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
+              </svg>
+              <span className="text-sm text-gray-300">Operator-Built</span>
+            </div>
+          </div>
+          <p className="mt-4 text-center text-xs md:text-sm text-gray-500 max-w-2xl mx-auto">
+            Real-world operations experience • Government, commercial, and private-sector exposure • Technology designed from the field—not a pitch deck
+          </p>
+        </div>
+      </section>
+
+      {/* What Lazy E Holdings Is - Clarity Section */}
+      <section className="px-4 md:px-6 py-16 md:py-24 bg-black-300">
+        <div className="mx-auto max-w-4xl">
+          <div className="text-center mb-8 md:mb-12">
+            <p className="text-sm font-medium text-gold-primary mb-2">Who We Are</p>
+            <h2 className="font-display text-2xl md:text-4xl font-bold text-gold-shimmer">
+              A Holding Company Built by an Operator
+            </h2>
+          </div>
+
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-base md:text-lg text-gray-400 leading-relaxed">
+              Lazy E Holdings is a Texas-based holding company that builds and operates focused ventures in <span className="text-gray-200">facilities, operations, and service-driven platforms</span>.
+            </p>
+            <p className="mt-4 text-base md:text-lg text-gray-400 leading-relaxed">
+              Each venture is created to solve a <span className="text-gray-200">specific, real problem</span>—validated through hands-on experience managing complex environments, large budgets, and mission-critical operations.
+            </p>
+            <p className="mt-6 text-lg md:text-xl text-gray-300 font-medium">
+              We don&apos;t build ideas. We build <span className="text-gold-shimmer">tools that get used</span>.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Ventures Section */}
       <section id="ventures" className="scroll-mt-20 px-4 md:px-6 py-16 md:py-24 bg-black-200">
         <div className="mx-auto max-w-4xl">
           <div className="mb-8 md:mb-12 text-center">
             <p className="text-sm font-medium text-gold-primary mb-2">Our Portfolio</p>
             <h2 className="font-display text-2xl md:text-4xl font-bold text-gold-shimmer">
-              Current Ventures
+              Our Ventures
             </h2>
             <p className="mt-3 md:mt-4 text-sm md:text-base text-gray-400 max-w-2xl mx-auto">
-              We&apos;re always building. Each venture addresses real problems with practical solutions—and this is just the beginning.
+              Each Lazy E venture is independent, focused, and purpose-built—while sharing the same operational DNA. We&apos;re always building. This is just the beginning.
             </p>
           </div>
 
@@ -333,7 +366,7 @@ export default function Home() {
           <div className="text-center mb-10 md:mb-16">
             <p className="text-sm font-medium text-gold-primary mb-2">How We Work</p>
             <h2 className="font-display text-2xl md:text-4xl font-bold text-gold-shimmer">
-              Built on Principles
+              Built on Principles, Not Trends
             </h2>
           </div>
 
@@ -353,7 +386,7 @@ export default function Home() {
                 Strategic Focus
               </h3>
               <p className="text-sm md:text-base text-gray-400">
-                Every decision is intentional. We identify real problems and build practical solutions that deliver measurable results.
+                Every venture starts with a real operational problem—not a market buzzword.
               </p>
             </div>
 
@@ -369,10 +402,10 @@ export default function Home() {
                 />
               </div>
               <h3 className="font-display text-lg md:text-xl font-semibold text-gold-shimmer mb-2">
-                Modern Technology
+                Modern, Practical Technology
               </h3>
               <p className="text-sm md:text-base text-gray-400">
-                We leverage current tools and platforms to build efficient, scalable solutions without unnecessary complexity.
+                We leverage modern tools only when they make systems faster, simpler, or more reliable.
               </p>
             </div>
 
@@ -388,10 +421,10 @@ export default function Home() {
                 />
               </div>
               <h3 className="font-display text-lg md:text-xl font-semibold text-gold-shimmer mb-2">
-                Quality Commitment
+                Quality Over Noise
               </h3>
               <p className="text-sm md:text-base text-gray-400">
-                We build things that last. Every product and service reflects our commitment to excellence and attention to detail.
+                We build products and services meant to last—designed for people who actually use them.
               </p>
             </div>
           </div>
@@ -404,7 +437,7 @@ export default function Home() {
           <div className="text-center mb-8 md:mb-12">
             <p className="text-sm font-medium text-gold-primary mb-2">About</p>
             <h2 className="font-display text-2xl md:text-4xl font-bold text-gold-shimmer">
-              The Story Behind Lazy E
+              Built From the Field—Not Theory
             </h2>
           </div>
 
@@ -427,10 +460,29 @@ export default function Home() {
 
               <div className="space-y-4 text-sm md:text-base text-gray-400 leading-relaxed">
                 <p>
-                  After 7 years as a Combat Engineer in the United States Marine Corps—including roles as a Facilities Manager at Marine Barracks Washington and an instructor at The Basic School where I trained over 200 Marine Officers—I saw firsthand how broken systems and inefficient processes waste people&apos;s time and energy.
+                  Clayton is a former United States Marine Corps Combat Engineer with extensive experience in <span className="text-gray-200">facilities management, infrastructure planning, and operational leadership</span>.
                 </p>
-                <p>
-                  I founded Lazy E Holdings with a simple belief: <span className="text-gray-200">technology should make life easier, not harder.</span> Every venture we build is designed to take something complicated and make it simple.
+                <p>His background includes:</p>
+                <ul className="space-y-2 text-gray-400">
+                  <li className="flex items-start gap-2">
+                    <span className="text-gold-primary mt-1">•</span>
+                    <span>Managing facilities supporting <span className="text-gray-200">2,500–10,000+ personnel</span></span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-gold-primary mt-1">•</span>
+                    <span>Planning and executing <span className="text-gray-200">$150M+ infrastructure projects</span></span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-gold-primary mt-1">•</span>
+                    <span>Overseeing <span className="text-gray-200">multi-million-dollar operating budgets</span></span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-gold-primary mt-1">•</span>
+                    <span>Leading <span className="text-gray-200">100+ projects</span> under strict safety and quality constraints</span>
+                  </li>
+                </ul>
+                <p className="pt-2">
+                  After years inside broken systems, Clayton founded Lazy E Holdings with a simple principle: <span className="text-gray-200">Technology should reduce effort—not create more of it.</span>
                 </p>
               </div>
             </div>
@@ -440,7 +492,7 @@ export default function Home() {
               <div className="p-4 md:p-6 rounded-2xl border border-gray-800 bg-black-300">
                 <h4 className="font-display text-base md:text-lg font-semibold text-gold-shimmer mb-2 md:mb-3">Our Mission</h4>
                 <p className="text-sm md:text-base text-gray-400">
-                  Build tools and services that eliminate friction—helping people spend less time on operations and more time on what matters to them.
+                  To eliminate friction in everyday operations—so people spend less time managing systems and more time living their lives.
                 </p>
               </div>
 
@@ -467,10 +519,10 @@ export default function Home() {
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-medium text-gold-primary mb-2">Get in Touch</p>
           <h2 className="font-display text-2xl md:text-4xl font-bold text-gold-shimmer mb-3 md:mb-4">
-            Let&apos;s Connect
+            Let&apos;s Build Something That Works
           </h2>
           <p className="text-sm md:text-base text-gray-400 mb-6 md:mb-8">
-            Interested in learning more about our ventures or exploring partnership opportunities?
+            Interested in our ventures or exploring a partnership?
           </p>
 
           <a
