@@ -5,7 +5,6 @@ import { useState } from "react";
 
 // Images for the site
 const images = {
-  hero: "https://images.unsplash.com/photo-1545194445-dddb8f4487c6?w=1200&q=80", // Dallas skyline
   strategy: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80", // Strategy planning
   technology: "https://www.camcode.com/wp-content/uploads/2018/06/shutterstock_2399344103-1135x675.webp", // Warehouse operations
   collaboration: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80", // Metal craftsman welding
@@ -37,7 +36,7 @@ const ventures: Venture[] = [
       "Built for scale",
     ],
     logo: "/images/axis-logo.png",
-    url: null,
+    url: "https://coreops-axis-clayton-lilleys-projects.vercel.app",
   },
   {
     id: "coreops",
@@ -53,7 +52,7 @@ const ventures: Venture[] = [
       "DFW focused",
     ],
     logo: "/images/coreops-logo.png",
-    url: null,
+    url: "https://coreops-axis-clayton-lilleys-projects.vercel.app",
   },
   {
     id: "k9trainpros",
@@ -186,15 +185,8 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black-300/90 backdrop-blur-md border-b border-gray-800 safe-area-top">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 md:px-6 py-3 md:py-4">
-          <a href="#" className="flex items-center gap-2 md:gap-4">
-            <Image
-              src="/images/lazy-e-logo-zoomed.jpg"
-              alt="Lazy E Holdings"
-              width={44}
-              height={44}
-              className="rounded-lg md:w-14 md:h-14"
-            />
-            <span className="hidden sm:block font-display text-lg md:text-xl font-semibold text-gold-shimmer">
+          <a href="#" className="flex items-center">
+            <span className="font-display text-lg md:text-xl font-semibold text-gold-shimmer">
               Lazy E Holdings
             </span>
           </a>
@@ -261,17 +253,16 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Hero Image */}
+            {/* Hero Image - Logo */}
             <div className="relative hidden lg:block">
               <div className="absolute -inset-4 bg-gradient-to-br from-gold-primary/20 to-transparent rounded-3xl blur-2xl" />
-              <div className="relative aspect-square rounded-2xl overflow-hidden border border-gray-800">
+              <div className="relative aspect-square rounded-2xl overflow-hidden border border-gray-800 bg-black-100 flex items-center justify-center p-12">
                 <Image
-                  src={images.hero}
-                  alt="Dallas Fort Worth skyline"
+                  src="/images/lazy-e-logo-zoomed.jpg"
+                  alt="Lazy E Holdings Logo"
                   fill
-                  className="object-cover"
+                  className="object-contain p-8"
                   priority
-                  unoptimized
                 />
               </div>
             </div>
